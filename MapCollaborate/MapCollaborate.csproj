@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\scripts\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Components\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Pages\" />
+    <None Remove="Components\" />
+    <None Remove="Services\" />
+    <None Remove="Models\" />
+    <None Remove="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Components\Map.razor.cs">
+      <DependentUpon>Components\Map.razor</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
